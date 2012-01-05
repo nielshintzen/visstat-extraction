@@ -16,5 +16,5 @@ that you would like to contribute. They might grant you with writing permission 
   * Visit: [https://accounts.google.com/NewAccount Google Accounts] and register your WUR email address there. 
   * Inform the administrator
     * Twan Leijzer
-    * Niels Hintzen
-  that you would like to contribute. They might grant you with writing permission to this site.  
+    * Niels Hintzen  
+   that you would like to contribute. They might grant you with writing permission to this site.  
