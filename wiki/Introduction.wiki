@@ -20,3 +20,4 @@ The query is ready to be executed, but first a connection to the VISSTAT databas
 <code>conn <- odbcConnect(dsn="visstatp",uid=user,pwd=passwd,believeNRows=F)</code>
 Next step is to actually evaluate the query.
 <code>visstatData <- sqlQuery(conn,query)</code>
+Please note that some queries might take a considerable amount of time to run! If it's not going quick enough, consider to query VISSTAT directly from Raja.
