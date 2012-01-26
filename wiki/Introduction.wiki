@@ -8,6 +8,7 @@ Welcome to the wiki page where you will find a number of templates that can be u
   * If you would like to contribute please read [getGoogleAccount]
 
 =Getting started=
+All templates are given in SQL code. We've chosen SQL because it can be used in a variety of different programs directly like SAS, R and SQLdeveloper. In some instances, examples in any of these languages are given to help new users to get started. Please pay close attention to the 'generic' SQL code as this is the original source.
   * in R: [gettingStartedinR]
   * in SAS: [gettingStartedinSAS]
   * in SQLdeveloper: [gettingStartedinSQLdeveloper]
