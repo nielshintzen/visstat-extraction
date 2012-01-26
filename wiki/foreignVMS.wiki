@@ -5,9 +5,9 @@ The starting date and end date need to be specified. An example is given below, 
 SELECT * FROM vms WHERE PPY_PLM_CNY_CODE <> 'nld' AND rgn_local_date BETWEEN '01-jan-2010' AND '31-dec-2010';
 </code>
 Or a list of countries
-SELECT * FROM vms WHERE PPY_PLM_CNY_CODE IN ('eng', AND rgn_local_date BETWEEN '01-jan-2010' AND '31-dec-2010';
-
-
+<code>
+SELECT * FROM vms WHERE PPY_PLM_CNY_CODE IN ('fra','gbr','nor') AND rgn_local_date BETWEEN '01-jan-2010' AND '31-dec-2010';
+</code>
 
 
 ==In R==
