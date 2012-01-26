@@ -13,8 +13,8 @@ or
 <code>
 startDate <- '01-jan-2010'
 endDate   <- '31-jan-2010'
-startDate <- paste("(',startDate,"')",sep="")
-endDate   <- paste("(',endDate,"')",  sep="")
+startDate <- paste("('",startDate,"')",sep="")
+endDate   <- paste("('",endDate,"')",  sep="")
 </code>
 Now the query itself
 <code>
