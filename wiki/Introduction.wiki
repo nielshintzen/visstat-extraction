@@ -7,7 +7,7 @@ Welcome to the wiki page where you will find a number of templates that can be u
   * Report bugs to either Twan Leijzer or report them under the [http://code.google.com/p/visstat-extraction/issues/list issues tab]
   * If you would like to contribute please read [getGoogleAccount]
 
-=Getting started=
+=Getting started in R=
 Start a recent version of R, preferably R 2.14.x and load the appropriate libraries
 <code>library(RODBC)</code>
 Copy one of the templates from the WIKI to your R editor.<br>
