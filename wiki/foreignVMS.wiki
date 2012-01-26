@@ -1,6 +1,7 @@
 =Extract Foreign VMS only=
 The starting date and end date need to be specified. An example is given below, as well as an R example with variable starting date and end date
 ==SQL==
+Select all but Dutch VMS data.
 <code>
 SELECT * FROM vms WHERE PPY_PLM_CNY_CODE <> 'nld' AND rgn_local_date BETWEEN '01-jan-2010' AND '31-dec-2010';
 </code>
