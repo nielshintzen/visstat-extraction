@@ -1,0 +1,4 @@
+=VMS templates=
+  * [foreignVMS]
+  * [nationalVMS]
+  * [tacsat]
