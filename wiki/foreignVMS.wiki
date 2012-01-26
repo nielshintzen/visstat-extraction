@@ -27,7 +27,7 @@ A list of countries can be created through a variable as well. However, if the l
 <code>
 countries <- c('fra','gbr','nor')
 
-SQLvect <- c("(")
+ SQLvect <- c("(")
 for ( rr in 1:(length(countries)-1) )
   SQLvect <- paste(SQLvect,"'",countries[rr],"',",sep="")
 SQLvect <- paste(SQLvect,"'",countries[rr+1],"'",sep="")
