@@ -4,16 +4,16 @@
 
 Function to map data by ICES rectangle. The column with ICES rectangles has to be named 'AREA_CODE'. The colors can be based on log transformed data (may give nicer maps) or linear. An example is given below.
 
-# data        = your data;
-# plot.data   = the column name with the data to be plotted;
-# log.col     = if True the colors are plotted on a log scale;
-# plot.ices   = if True the ICES rectangles name is plotted in the squares;
-# plot.value  = if True, the values of plot.data are plotted in the squares;
-# title       = title of the plot;
-# min.lon     = minimal longitude to be plotted;
-# max.lon     = maximal longitude to be plotted;
-# min.lat     = minimal latitude to be plotted;
-# max.lat     = maximal latitude to be plotted;
+data        = your data;
+plot.data   = the column name with the data to be plotted;
+log.col     = if True the colors are plotted on a log scale;
+plot.ices   = if True the ICES rectangles name is plotted in the squares;
+plot.value  = if True, the values of plot.data are plotted in the squares;
+title       = title of the plot;
+min.lon     = minimal longitude to be plotted;
+max.lon     = maximal longitude to be plotted;
+min.lat     = minimal latitude to be plotted;
+max.lat     = maximal latitude to be plotted;
 
 
 = Details =
