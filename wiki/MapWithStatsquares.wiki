@@ -64,7 +64,7 @@ else{
 rr <- range(0,mat.FISH,na.rm=T)
       image(lx,ly,mat.FISH,zlim=rr,xlab="longitude",
       ylab="latitude",xlim = c(min.lon, max.lon),
-      ylim = c(min.lat, max.lat),col=rev(heat.colors(100)))
+      ylim = c(min.lat, max.lat),col=rev(heat.colors(100)), main = title)
 }     
 
 box(lty = 1)
