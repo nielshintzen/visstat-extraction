@@ -16,16 +16,3 @@ The following points guide you through the process to access the visstat databas
     * {{{TNS Service Name}}}: visstatp
     * {{{User ID}}}: _your raja username_
   * Use the _Test Connection_ button and fill out your visstat password to see if the connection works
-
-==R settings==
-
-You need to have the library RODBC installed to access the database.
-<code>install.packages("RODBC",repos=getOption("repos"))</code>
-
-Now you should be able to connect to the database. Let's try!
-<code>conn <- odbcConnect(dsn="visstatp",uid=user,pwd=passwd,believeNRows=F)</code>
-Let's see if we can get some data out of the database then.
-{{{
-query <- paste("select * from vms where rgn_local_date between '01-jan-2010' and '31-jan-2010'")
-vmsData <- sqlQuery(conn,query)
-}}}
