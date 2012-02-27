@@ -1,4 +1,10 @@
 =Getting started in R=
+
+==R settings==
+
+You need to have the library RODBC installed to access the database.
+<code>install.packages("RODBC",repos=getOption("repos"))</code>
+
 Start a recent version of R, preferably R 2.14.x and load the appropriate libraries
 <code>library(RODBC)</code>
 Copy one of the templates from the WIKI to your R editor.<br>
