@@ -5,14 +5,14 @@ The starting date and end date need to be specified. An example is given below, 
 ==SQL==
 <code>
 SELECT PPY_PLM_CNY_CODE as VE_COU, 
-       ID as VE_REF, 
-       LATITUDE as SI_LATI, 
-       LONGITUDE as SI_LONG, 
-       RGN_LOCAL_DATE as SI_DATE, 
-       RGN_LOCAL_TIME as SI_TIME, 
-       HEADING as SI_HE, 
-       SPEED as SI_SP FROM vms 
-WHERE rgn_local_date BETWEEN '01-jan-2010' AND '31-dec-2010';
+        ID as VE_REF, 
+        LATITUDE as SI_LATI, 
+        LONGITUDE as SI_LONG, 
+        TO_CHAR(RGN_LOCAL_DATE,'dd/mm/yyyy') as SI_DATE,        
+TRIM(TO_CHAR(FLOOR(RGN_LOCAL_TIME/100),'09'))||':'||TRIM(TO_CHAR(MOD(RGN_LOCAL_TIME,100),'09')) as SI_TIME,
+        HEADING as SI_HE, 
+        SPEED as SI_SP FROM vms 
+ WHERE rgn_local_date BETWEEN '01-jan-2010' AND '31-jan-2010';
 </code>
 
 ==In R==
