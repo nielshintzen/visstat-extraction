@@ -1,5 +1,5 @@
 =Introduction=
-Welcome to the wiki page where you will find a number of templates that can be used to extract data from VISSTAT within [http://www.r-project.org R].
+Welcome to the wiki page where you will find a number of templates that can be used to extract data from VISSTAT.
 
 =Before you start=
   * Before you are able to extract data from VISSAT, please read [connect2Visstat] 
