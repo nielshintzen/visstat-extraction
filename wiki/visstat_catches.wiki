@@ -1,17 +1,16 @@
-#This code extracts landings from the catches table in visstat.
+This code extracts landings from the catches table in visstat.
 
 = Introduction =
 
-This query extracts the landings from the catches table in visstat. The input selection is species, country, gear, ices_area and a timeinterval.
+This query extracts landings from the catches table in visstat. The input selection is species, country, gear, ices_area and a timeinterval.
 It creates a table from your selection with registrations (landings) per species, country, gear, ices_quadrant, vessel, vessel length, vessel power, arrival and departure date and time.
 
 
 
 = Details =
-
-# FOR THIS CODE YOU NEED AN ACCOUNT AND LOGIN NAME FOR THE VISSTAT DATABASE (PROVIDED BY PETER VD KAMP)
-
-<code>   
+<code>
+# FOR THIS CODE YOU NEED AN ACCOUNT FOR THE VISSTAT DATABASE (PROVIDED BY PETER VD KAMP)
+   
 # LOAD LIBRARIES 
 library(RODBC)
 
@@ -26,7 +25,7 @@ visstat <- odbcConnect(dsn="visstatp", uid="",pwd="")
 # Make a selection for one or more: species, date interval, gear,  ices_area and country.
 # Query may take some time if your time interval or the number of species is large.
 
-# select for the time interval
+# select the time interval
 tstart        <- "'01-jan-2010'"         
 tstop         <- "'31-jan-2010'"
 
