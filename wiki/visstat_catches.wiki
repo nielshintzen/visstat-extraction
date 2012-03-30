@@ -1,0 +1,85 @@
+#This code extracts landings from the catches table in visstat.
+
+= Introduction =
+
+This query extracts the landings from the catches table in visstat. The input selection is species, country, gear, ices_area and a timeinterval.
+It creates a table from your selection with registrations (landings) per species, country, gear, ices_quadrant, vessel, vessel length, vessel power, arrival and departure date and time.
+
+
+
+= Details =
+
+# FOR THIS CODE YOU NEED AN ACCOUNT AND LOGIN NAME FOR THE VISSTAT DATABASE (PROVIDED BY PETER VD KAMP)
+   
+# LOAD LIBRARIES 
+library(RODBC)
+
+# MAKE CONNECTION TO THE VISSTAT DATABASE
+
+visstat <- odbcConnect(dsn="visstatp", uid="",pwd="")
+
+###############
+## SELECTION ##
+###############
+
+# Make a selection for one or more: species, date interval, gear,  ices_area and country.
+# Query may take some time if your time interval or the number of species is large.
+
+# select for the time interval
+tstart        <- "'01-jan-2010'"         
+tstop         <- "'31-jan-2010'"
+
+
+species       <- "('DAB','SOL','PLE')"
+gear          <- "('TBB')"
+icesArea      <- "('IV')"
+country       <- "('nld')"
+
+#################
+##### QUERY #####
+#################
+
+query   <-    paste( "select 
+                     tr.trip_number
+                   , tr.arrival_date
+                   , tr.arrival_time
+                   , tr.departure_date
+                   , tr.departure_time
+                   , rgn.qpy_ices_quadrant ices_quadrant
+                   , rgn.gpy_code gear
+                   , rgn.MESHSIZE
+                   , rgn.trp_ppy_plm_code vessel
+                   , ca.txn_ices_code species
+                   , ca.weight
+                   , ca.rgn_trp_ppy_plm_cny_code country
+                   , TO_CHAR(ca.rgn_trp_arrival_date,'Q') quarter
+                   , TO_CHAR(ca.rgn_trp_arrival_date,'YYYY') year
+                   , nvl(qp.ices_area,'UNKNOWN') ices_area
+                   , nvl(qp.ICES_SUBAREA,'UNKNOWN') ices_subarea
+                   , pp.power power
+                   , pp.length vessel_length
+             
+                 FROM trips tr
+                 JOIN registrations rgn ON rgn.trp_arrival_date=tr.arrival_date
+                  AND rgn.trp_arrival_time=tr.arrival_time
+                  AND rgn.trp_ppy_id=tr.ppy_id
+                 JOIN catches ca ON ca.rgn_trp_arrival_date=rgn.trp_arrival_date
+                  AND ca.rgn_trp_arrival_time=rgn.trp_arrival_time
+                  AND ca.rgn_trp_ppy_id=rgn.trp_ppy_id
+                  AND ca.rgn_rgn_date=rgn.rgn_date
+                 JOIN quadrant_properties qp ON qp.ices_quadrant=rgn.qpy_ices_quadrant
+                 LEFT OUTER JOIN platform_properties pp ON (pp.id = tr.ppy_id
+                  AND tr.arrival_DATE between pp.START_DATE
+                  AND nvl(pp.END_DATE,sysdate))
+             
+                WHERE rgn.trp_arrival_date between ",tstart," and ",tstop,"
+                  AND tr.PPY_PLM_CNY_CODE = ",country,"
+                  AND ca.txn_ices_code IN ",species,"
+             ORDER BY tr.PPY_ID, tr.departure_date, rgn.rgn_date")
+
+
+## EXECUTE THE QUERY ##
+visstat_catches <- sqlQuery(visstat,query,believeNRows = FALSE) 
+
+## WRITE TABLE TO CSV FILE ##
+#write.csv(catches, "D:visstat_catches.csv")
