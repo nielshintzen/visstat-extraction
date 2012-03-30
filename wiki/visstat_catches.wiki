@@ -15,7 +15,6 @@ It creates a table from your selection with registrations (landings) per species
 library(RODBC)
 
 # MAKE CONNECTION TO THE VISSTAT DATABASE
-
 visstat <- odbcConnect(dsn="visstatp", uid="",pwd="")
 
 ###############
