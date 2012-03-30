@@ -10,7 +10,8 @@ It creates a table from your selection with registrations (landings) per species
 = Details =
 
 # FOR THIS CODE YOU NEED AN ACCOUNT AND LOGIN NAME FOR THE VISSTAT DATABASE (PROVIDED BY PETER VD KAMP)
-   
+
+<code>   
 # LOAD LIBRARIES 
 library(RODBC)
 
@@ -83,3 +84,5 @@ visstat_catches <- sqlQuery(visstat,query,believeNRows = FALSE)
 
 ## WRITE TABLE TO CSV FILE ##
 #write.csv(catches, "D:visstat_catches.csv")
+
+</code>
