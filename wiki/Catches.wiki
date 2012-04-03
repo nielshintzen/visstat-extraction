@@ -1,3 +1,4 @@
 =Landings / Catches templates=
 
   * [landingsByTrip landingsByTrip]
+  * [eflalo eflalo]
