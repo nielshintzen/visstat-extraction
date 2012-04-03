@@ -1,0 +1,3 @@
+Landings / Catches templates
+
+[landingsByTrip landingsByTrip]
