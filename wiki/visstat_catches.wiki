@@ -68,7 +68,7 @@ Or if you have a lot of species, try this
 <code>
 species   <- c("DAB","SOL","PLE","HER","HOM","MAC")
 SQLvect   <- c("(")
-for ( rr in 1:(length(countries)-1) )
+for ( rr in 1:(length(species)-1) )
   SQLvect <- paste(SQLvect,"'",species[rr],"',",sep="")
 SQLvect   <- paste(SQLvect,"'",species[rr+1],"'",sep="")
 SQLvect   <- paste(SQLvect,")",sep="")
