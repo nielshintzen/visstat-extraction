@@ -53,7 +53,7 @@ select trips.trip_number,
        catches.rgn_trp_prt_code = registrations.trp_prt_code AND
        catches.rgn_trp_prt_cny_code = registrations.trp_prt_cny_code AND
        catches.rgn_rgn_date = registrations.rgn_date;
-
+</code>
 
 == In R ==
 <code>
