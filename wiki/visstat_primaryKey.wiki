@@ -5,13 +5,13 @@ Each table in Visstat has it's own unique combination of columns to ensure that 
 === Trips table ===
 <code>
 Column names:
-  # ARRIVAL_DATE
-  # ARRIVAL_TIME
-  # PPY_ID
-  # PPY_PLM_CODE
-  # PPY_PLM_CNY_CODE
-  # PRT_CNY_CODE
-  # PRT_CODE
+  #ARRIVAL_DATE
+  #ARRIVAL_TIME
+  #PPY_ID
+  #PPY_PLM_CODE
+  #PPY_PLM_CNY_CODE
+  #PRT_CNY_CODE
+  #PRT_CODE
 </code>
 
 === Registrations table ===
