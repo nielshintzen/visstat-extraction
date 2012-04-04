@@ -4,6 +4,7 @@
     * [gettingStartedinR]
     * [gettingStartedinSAS]
     * [gettingStartedinSQLdeveloper]
+    * [visstat_primaryKey]
   * [Templates]
     * [VMS]
     * [Catches]
