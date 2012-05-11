@@ -3,3 +3,4 @@
   * [nationalVMS]
   * [tacsat]
   * [vesselSelection]
+  * [gearSelection]
