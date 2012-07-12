@@ -5,7 +5,7 @@ The starting date and end date need to be specified. An example is given below, 
 ==SQL==
 <code>
 SELECT PPY_PLM_CNY_CODE as VE_COU, 
-        ID as VE_REF, 
+        PPY_ID as VE_REF, 
         LATITUDE as SI_LATI, 
         LONGITUDE as SI_LONG, 
         TO_CHAR(RGN_LOCAL_DATE,'dd/mm/yyyy') as SI_DATE,        
@@ -44,7 +44,7 @@ Now the query itself
 library(RODBC)
 
  query <- paste("SELECT PPY_PLM_CNY_CODE as VE_COU, 
-                 ID as VE_REF, 
+                 PPY_ID as VE_REF, 
                  LATITUDE as SI_LATI, 
                  LONGITUDE as SI_LONG, 
                  TO_CHAR(RGN_LOCAL_DATE,'dd/mm/yyyy') as SI_DATE,        
